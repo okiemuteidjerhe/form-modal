@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="fname">First Name <span>Required</span></label> <br />
+        <input
+          type="text"
+          id="fname"
+          name="first-name"
+          placeholder="Your first name..."
+          required
+        /><br />
+
+        <label for="lname">Last Name <span>Required</span></label> <br />
+        <input
+          type="text"
+          id="lname"
+          name="last-name"
+          placeholder="Your last name..."
+          required
+        /><br />
+
+        <label for="country">Country</label><br />
+        <select name="home-country" id="country">
+          <option value="Nigeria">Nigeria</option>
+          <option value="Australia">Australia</option>
+          <option value="London">London</option></select
+        ><br />
+
+        <label for="subject">Subject</label><br />
+        <textarea
+          name="subject"
+          id="subject"
+          placeholder="Write something..."
+        ></textarea
+        ><br />
+      </div>
+
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <div class="modal">
+      <p>Your response has been recorded.</p>
+      <button class="close">&times;</button>
+    </div>
+  </body>
+</html>

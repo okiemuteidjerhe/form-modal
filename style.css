@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+}
+form{
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+span{
+    border: 2px solid #c20d0d;
+    padding: 3.5px;
+    border-radius: 25px;
+    font-size: 0.6rem;
+    color: #c20d0d;
+}
+input[type="text"], select, textarea{
+    /* width: 100%; */ /*  30%; */
+    padding: 12px 20px; /*Accomodates the image we added for the text filled*/
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* box-sizing: border-box; */
+    outline: none; /*Because some browsers will add a blue outline when the input fild gets clicked. We use this to remove it. We use :focus to do something different with the input field*/
+    transition: 0.5s; /*To animate the background-color (takes 0.5 seconds to change the background-color on focus)*/
+    /* color: white; */
+}
+input[type="text"]:focus, textarea:focus{
+    background-color: greenyellow;
+    /* width: 70%;
+    transition: width 0.5s ease-in-out; */
+}
+input[type="text"]{
+    background-image: url(image/person-icon-1682.png);
+    background-repeat: no-repeat;
+    background-position: 6px center ;
+    background-size: 10px 10px;
+}
+button{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+    cursor: pointer;
+    float: left;
+    width: 15%;
+}
+button:hover{
+    background-color: #45a049;
+}
+textarea{
+    height: 200px;
+    resize: none;/*Doesn't allow resizing of the textarea*/
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input, select, textarea{
+    float: right;
+    width: 75%;
+}
+label{
+    float: left;
+    width: 25%;
+    margin-top: 38px;
+}
+div::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.modal{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #bfacac;
+    width: 30rem;
+    height: fit-content;
+    font-size: 2rem;
+    font-style: italic;
+    font-family: cursive;
+    text-align: center;
+    padding-bottom: 20px;
+    display: none;
+}
+.modal button{
+    float: none;
+    font-size: 2rem;
+    padding: 2px;
+}
+
+@media screen and (max-width: 600px) {
+    input, label, select, textarea, button{
+        width:100%;
+    }
+    .modal{
+        top: 8%;
+        left: 10px;
+        right: 10px;
+        width: 22rem;
+        font-size: 1.3rem;
+    }
+    .modal button{
+        width: 30%;
+    }
+}
